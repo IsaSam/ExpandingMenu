@@ -10,7 +10,8 @@ import UIKit
 import ExpandingMenu
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var textLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,14 +31,17 @@ class ViewController: UIViewController {
         
         let item1 = ExpandingMenuItem(size: menuButtonSize, title: "Music", image: UIImage(named: "icons8-music")!, highlightedImage: UIImage(named: "icons8-music1")!, backgroundImage: UIImage(named: "icons8-music"), backgroundHighlightedImage: UIImage(named: "icons8-music1")) { () -> Void in
             // Do some action
+            self.textLabel.text = "Musics view"
         }
         
         let item2 = ExpandingMenuItem(size: menuButtonSize, title: "Movies", image: UIImage(named: "icons8-movie")!, highlightedImage: UIImage(named: "icons8-movie1")!, backgroundImage: UIImage(named: "icons8-movie"), backgroundHighlightedImage: UIImage(named: "icons8-movie1")) { () -> Void in
             // Do some action
+            self.textLabel.text = "Movies view"
         }
         
         let item3 = ExpandingMenuItem(size: menuButtonSize, title: "Videos", image: UIImage(named: "icons8-video")!, highlightedImage: UIImage(named: "icons8-video1")!, backgroundImage: UIImage(named: "icons8-video"), backgroundHighlightedImage: UIImage(named: "icons8-video1")) { () -> Void in
             // Do some action
+            self.textLabel.text = "Videos view"
         }
         
         menuButton.addMenuItems([item1, item2, item3])
@@ -78,7 +82,7 @@ class ViewController: UIViewController {
         menuButton.enabledExpandingAnimations = []
         
  //       menuButton.expandingAnimations = CustomAnimationOptions.all.symmetricDifference(.menuButtonRotate)
-        menuButton.enabledExpandingAnimations.formSymmetricDifference(.MenuButtonRotation)
+        menuButton.enabledExpandingAnimations =  AnimationOptions.All.symmetricDifference(.MenuButtonRotation)
         
         // Folding Animation
         //       menuButton.foldingAnimations = .all
