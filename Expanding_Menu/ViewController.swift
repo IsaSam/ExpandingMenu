@@ -14,25 +14,29 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ExpandMenu()
+
+    }
+    
+    public func ExpandMenu(){
         let menuButtonSize: CGSize = CGSize(width: 64.0, height: 64.0)
         
- //       let menuButton = ExpandingMenuButton(frame: CGRect(origin: CGPoint.zero, size: menuButtonSize), centerImage: UIImage(named: "chooser-button-tab")!, centerHighlightedImage: UIImage(named: "chooser-button-tab-highlighted")!)
-        let menuButton = ExpandingMenuButton(frame: CGRect(origin: CGPoint.zero, size: menuButtonSize), centerImage: UIImage(named: "iconfinder_share_64x45")!, centerHighlightedImage: UIImage(named: "iconfinder_sharing_64")!)
+        let menuButton = ExpandingMenuButton(frame: CGRect(origin: CGPoint.zero, size: menuButtonSize), centerImage: UIImage(named: "icons8-plus")!, centerHighlightedImage: UIImage(named: "icons8-plus1")!)
         
         
         
         menuButton.center = CGPoint(x: self.view.bounds.width - 32.0, y: self.view.bounds.height - 72.0)
         view.addSubview(menuButton)
         
-        let item1 = ExpandingMenuItem(size: menuButtonSize, title: "Music", image: UIImage(named: "iconfinder_share_64x45")!, highlightedImage: UIImage(named: "iconfinder_sharing_64")!, backgroundImage: UIImage(named: "iconfinder_share_64x45"), backgroundHighlightedImage: UIImage(named: "iconfinder_sharing_64")) { () -> Void in
+        let item1 = ExpandingMenuItem(size: menuButtonSize, title: "Music", image: UIImage(named: "icons8-music")!, highlightedImage: UIImage(named: "icons8-music1")!, backgroundImage: UIImage(named: "icons8-music"), backgroundHighlightedImage: UIImage(named: "icons8-music1")) { () -> Void in
             // Do some action
         }
         
-        let item2 = ExpandingMenuItem(size: menuButtonSize, title: "Movies", image: UIImage(named: "iconfinder_share_64x45")!, highlightedImage: UIImage(named: "iconfinder_sharing_64")!, backgroundImage: UIImage(named: "iconfinder_share_64x45"), backgroundHighlightedImage: UIImage(named: "iconfinder_sharing_64")) { () -> Void in
+        let item2 = ExpandingMenuItem(size: menuButtonSize, title: "Movies", image: UIImage(named: "icons8-movie")!, highlightedImage: UIImage(named: "icons8-movie1")!, backgroundImage: UIImage(named: "icons8-movie"), backgroundHighlightedImage: UIImage(named: "icons8-movie1")) { () -> Void in
             // Do some action
         }
         
-        let item3 = ExpandingMenuItem(size: menuButtonSize, title: "Videos", image: UIImage(named: "iconfinder_share_64x45")!, highlightedImage: UIImage(named: "iconfinder_sharing_64")!, backgroundImage: UIImage(named: "iconfinder_share_64x45"), backgroundHighlightedImage: UIImage(named: "iconfinder_sharing_64")) { () -> Void in
+        let item3 = ExpandingMenuItem(size: menuButtonSize, title: "Videos", image: UIImage(named: "icons8-video")!, highlightedImage: UIImage(named: "icons8-video1")!, backgroundImage: UIImage(named: "icons8-video"), backgroundHighlightedImage: UIImage(named: "icons8-video1")) { () -> Void in
             // Do some action
         }
         
@@ -70,17 +74,17 @@ class ViewController: UIViewController {
         }
         
         // Expanding Animation
-   //     menuButton.expandingAnimations = [] // No animation
+        //     menuButton.expandingAnimations = [] // No animation
         menuButton.enabledExpandingAnimations = []
         
-  //      menuButton.expandingAnimations = CustomAnimationOptions.all.symmetricDifference(.menuButtonRotate)
-  //      menuButton.enabledExpandingAnimations.symmetricDifference(.MenuButtonRotation)
+ //       menuButton.expandingAnimations = CustomAnimationOptions.all.symmetricDifference(.menuButtonRotate)
+        menuButton.enabledExpandingAnimations.formSymmetricDifference(.MenuButtonRotation)
         
         // Folding Animation
- //       menuButton.foldingAnimations = .all
+        //       menuButton.foldingAnimations = .all
         menuButton.enabledFoldingAnimations = .All
         
-  //      menuButton.foldingAnimations = [.MenuItemMoving, .MenuItemFade, .MenuButtonRotation]
+        //      menuButton.foldingAnimations = [.MenuItemMoving, .MenuItemFade, .MenuButtonRotation]
         menuButton.enabledFoldingAnimations = [.MenuItemMoving, .MenuItemFade, .MenuButtonRotation]
         
         //////
@@ -88,23 +92,21 @@ class ViewController: UIViewController {
         ///////////////////// ExpandingMenuItem
         
         // Title
-    
+        
         item1.title = "Music"
-        item1.titleColor = UIColor.black
+        item1.titleColor = UIColor.brown
         // Title margin to menu item
         item1.titleMargin = 4
         
         item2.title = "Movies"
-        item2.titleColor = UIColor.black
+        item2.titleColor = UIColor.red
         // Title margin to menu item
         item2.titleMargin = 4
         
         item3.title = "Videos"
-        item3.titleColor = UIColor.black
+        item3.titleColor = UIColor.blue
         // Title margin to menu item
         item3.titleMargin = 4
-        
-
         
         //////
     }
