@@ -12,9 +12,13 @@
 		96B1BB62232F5350002D5282 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B1BB60232F5350002D5282 /* Main.storyboard */; };
 		96B1BB64232F5352002D5282 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96B1BB63232F5352002D5282 /* Assets.xcassets */; };
 		96B1BB67232F5352002D5282 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B1BB65232F5352002D5282 /* LaunchScreen.storyboard */; };
+		96B1BB6F232F5926002D5282 /* ExpandingMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B1BB6E232F5926002D5282 /* ExpandingMenu.framework */; };
+		96B1BB71232F59F0002D5282 /* ExpandingMenu in Resources */ = {isa = PBXBuildFile; fileRef = 96B1BB70232F59F0002D5282 /* ExpandingMenu */; };
+		AA6D4BA952C43D30AEC941C5 /* Pods_Expanding_Menu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FC5C6EAD807B2221088A47 /* Pods_Expanding_Menu.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74FC5C6EAD807B2221088A47 /* Pods_Expanding_Menu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Expanding_Menu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B1BB59232F5350002D5282 /* Expanding_Menu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expanding_Menu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B1BB5C232F5350002D5282 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96B1BB5E232F5350002D5282 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,10 @@
 		96B1BB63232F5352002D5282 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96B1BB66232F5352002D5282 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96B1BB68232F5352002D5282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96B1BB6E232F5926002D5282 /* ExpandingMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ExpandingMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96B1BB70232F59F0002D5282 /* ExpandingMenu */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ExpandingMenu; sourceTree = "<group>"; };
+		9BA0367B2F78BAA470BB7E88 /* Pods-Expanding_Menu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expanding_Menu.release.xcconfig"; path = "Pods/Target Support Files/Pods-Expanding_Menu/Pods-Expanding_Menu.release.xcconfig"; sourceTree = "<group>"; };
+		B31BF8B148247D01E7385E96 /* Pods-Expanding_Menu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expanding_Menu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Expanding_Menu/Pods-Expanding_Menu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B1BB6F232F5926002D5282 /* ExpandingMenu.framework in Frameworks */,
+				AA6D4BA952C43D30AEC941C5 /* Pods_Expanding_Menu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57C19C8CE3BD4D5B5D342EF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96B1BB6E232F5926002D5282 /* ExpandingMenu.framework */,
+				74FC5C6EAD807B2221088A47 /* Pods_Expanding_Menu.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		96B1BB50232F5350002D5282 = {
 			isa = PBXGroup;
 			children = (
+				96B1BB70232F59F0002D5282 /* ExpandingMenu */,
 				96B1BB5B232F5350002D5282 /* Expanding_Menu */,
 				96B1BB5A232F5350002D5282 /* Products */,
+				B4C591BC2F87C225263ED778 /* Pods */,
+				57C19C8CE3BD4D5B5D342EF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +86,15 @@
 			path = Expanding_Menu;
 			sourceTree = "<group>";
 		};
+		B4C591BC2F87C225263ED778 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B31BF8B148247D01E7385E96 /* Pods-Expanding_Menu.debug.xcconfig */,
+				9BA0367B2F78BAA470BB7E88 /* Pods-Expanding_Menu.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96B1BB6B232F5352002D5282 /* Build configuration list for PBXNativeTarget "Expanding_Menu" */;
 			buildPhases = (
+				FFE7A4AD8583AD6D94A63079 /* [CP] Check Pods Manifest.lock */,
 				96B1BB55232F5350002D5282 /* Sources */,
 				96B1BB56232F5350002D5282 /* Frameworks */,
 				96B1BB57232F5350002D5282 /* Resources */,
+				495B698286D0255032BC9FB1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B1BB71232F59F0002D5282 /* ExpandingMenu in Resources */,
 				96B1BB67232F5352002D5282 /* LaunchScreen.storyboard in Resources */,
 				96B1BB64232F5352002D5282 /* Assets.xcassets in Resources */,
 				96B1BB62232F5350002D5282 /* Main.storyboard in Resources */,
@@ -129,6 +163,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		495B698286D0255032BC9FB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Expanding_Menu/Pods-Expanding_Menu-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ExpandingMenu/ExpandingMenu.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ExpandingMenu.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Expanding_Menu/Pods-Expanding_Menu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFE7A4AD8583AD6D94A63079 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Expanding_Menu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		96B1BB55232F5350002D5282 /* Sources */ = {
@@ -278,6 +351,7 @@
 		};
 		96B1BB6C232F5352002D5282 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B31BF8B148247D01E7385E96 /* Pods-Expanding_Menu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +370,7 @@
 		};
 		96B1BB6D232F5352002D5282 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BA0367B2F78BAA470BB7E88 /* Pods-Expanding_Menu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

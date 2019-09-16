@@ -1,0 +1,16 @@
+PODS:
+  - ExpandingMenu (0.3.1)
+
+DEPENDENCIES:
+  - ExpandingMenu
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ExpandingMenu
+
+SPEC CHECKSUMS:
+  ExpandingMenu: 107548f3cb8c04b28a8b6b436983f506849484cc
+
+PODFILE CHECKSUM: 61c1cdc3cd9ba61e0fef01470f99bed2d21367d0
+
+COCOAPODS: 1.5.3
